@@ -25,6 +25,7 @@ CREATE TABLE inventario (
 
 
 CREATE TABLE mobs (
+<<<<<<< HEAD
   ID INT AUTO_INCREMENT PRIMARY KEY,
   nombre_mob VARCHAR(255),
   tipo_mob VARCHAR(50),
@@ -33,6 +34,16 @@ CREATE TABLE mobs (
   distancia_ataque BOOLEAN DEFAULT FALSE,
   bioma INT ,
   interaccion_id INT,
+=======
+  ID INT PRIMARY KEY,
+  nombre_mob VARCHAR(255),
+  tipo_mob VARCHAR(50),
+  dano_mob INT BOOLEAN,
+  movilidad INT BOOLEAN,
+  distancia_ataque INT,
+  bioma INT FOREIGN KEY,
+  interaccion_id INT FOREIGN KEY,
+>>>>>>> 1cfce0e6c1e8910f9b3685cb4e3ea1f842a8f52a
   reproduccion BOOLEAN,
   PRIMARY KEY (interaccion_id), 
   FOREIGN KEY (interaccion_id) REFERENCES cursos(id)
