@@ -1,0 +1,2 @@
+INSERT INTO mobs(nombre_mob, tipo_mob, dano_mob,vida_mob, movilidad, distancia_ataque, bioma, interaccion_id, reproduccion);
+VALUES ('Zombi', 'Hostil', '3', '20', 'terrestre', 'cuerpo a cuerpo', '', 'atacar', 'si' );
