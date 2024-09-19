@@ -27,8 +27,8 @@ CREATE TABLE inventario (
 
 CREATE TABLE mobs (
   ID INT PRIMARY KEY,
-  nombre_mob VARCHAR,
-  tipo_mob TEXT,
+  nombre_mob VARCHAR(255),
+  tipo_mob VARCHAR(50),
   dano_mob INT BOOLEAN,
   movilidad INT BOOLEAN,
   distancia_ataque INT,
