@@ -4,47 +4,44 @@ show tables;
 CREATE TABLE jugadores (
   ID INT AUTO_INCREMENT PRIMARY KEY,
   nombres VARCHAR(20),
-  inventario_id INT,
   ubicacionuser_id INT,
-  fecha_registro DATETIME,
   PRIMARY KEY (inventario_id, ubicacionuser_id), 
   FOREIGN KEY (inventario_id) REFERENCES cursos(id),
   FOREIGN KEY (ubicacionuser_id) REFERENCES cursos(id)
 );
 
-
-CREATE TABLE inventario (
+CREATE TABLE item (
   ID INT AUTO_INCREMENT PRIMARY KEY,
-  items_id VARCHAR,
-  user_id INT PRIMARY KEY,
-  cantidad INT,
-  PRIMARY KEY (user_id, items_id), 
-  FOREIGN KEY (user_id) REFERENCES cursos(id),
-  FOREIGN KEY (items_id) REFERENCES cursos(id)  
+  nombres_item VARCHAR(20),
+  categoria_dimension TEXT,
+  descripcion TEXT
+  );
+
+CREATE TABLE estructuras(
+  ID INT AUTO_INCREMENT PRIMARY KEY,
+  nombre_estructura VARCHAR(250),
+  bioma_id INT,
+  dimesion_id INT,
+  mob_id
+  PRIMARY KEY (inventario_id, ubicacionuser_id), 
+  FOREIGN KEY (inventario_id) REFERENCES cursos(id),
+  FOREIGN KEY (ubicacionuser_id) REFERENCES cursos(id)
 );
 
-
 CREATE TABLE mobs (
-<<<<<<< HEAD
   ID INT AUTO_INCREMENT PRIMARY KEY,
   nombre_mob VARCHAR(255),
   tipo_mob VARCHAR(50),
   dano_mob INT,
   movilidad INT,
+  animal BOOLEAN,
+  mounstro BOOLEAN,
+  humano BOOLEAN,
   distancia_ataque BOOLEAN DEFAULT FALSE,
   bioma INT ,
   interaccion_id INT,
-=======
-  ID INT PRIMARY KEY,
-  nombre_mob VARCHAR(255),
-  tipo_mob VARCHAR(50),
-  dano_mob INT BOOLEAN,
-  movilidad INT BOOLEAN,
-  distancia_ataque INT,
-  bioma INT FOREIGN KEY,
-  interaccion_id INT FOREIGN KEY,
->>>>>>> 1cfce0e6c1e8910f9b3685cb4e3ea1f842a8f52a
   reproduccion BOOLEAN,
+  boss BOOLEAN,
   PRIMARY KEY (interaccion_id), 
   FOREIGN KEY (interaccion_id) REFERENCES cursos(id)
 );
@@ -87,9 +84,22 @@ CREATE TABLE estructura(
  nombre_estructura VARCHAR(255),
  descripcion_de_estructura TEXT,
  bioma_id INT,
- dimension_id INT,
+ dimensiones_id INT,
  mob_id INT,
- PRIMARY KEY (bioma_id,dimension_id,mob_id),
- FOREIGN KEY (ubicacionuser_id) REFERENCES cursos(id),
+ PRIMARY KEY (bioma_id,dimensiones_id,mob_id),
+ FOREIGN KEY (bioma_id) REFERENCES cursos(id),
+ FOREIGN KEY (dimensiones_id) REFERENCES cursos(id),
  FOREIGN KEY (mod_id) REFERENCES cursos(id) 
 );
+
+CREATE TABLE dimensiones(
+ID INT PRIMARY KEY,
+nombre_de_dimension VARCHAR(20),
+descripcion_de_dimension TEXT,
+ubicacionuser_id INT,
+mob_id INT,
+PRIMARY KEY (ubicacionuser_id,mob_id),
+FOREIGN KEY (ubicacionuser_id) REFERENCES cursos(id),
+FOREIGN KEY (mod_id) REFERENCES cursos(id)
+)
+
