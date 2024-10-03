@@ -1,6 +1,10 @@
-INSERT INTO item (, nombre_item)
-    VALUES (("pasto"), ("tierra"), ("tronco"), ("madera"),
-    ("piedra"),("puerta de madera"), ("valla de madera"),
-    ("puerta de valla"), (""),("")   ,(""))
+INSERT INTO item (nombre_item, categoria_dimencion)
+    VALUES ("pasto","mundo"), ("tierra","mundo"), ("tronco","mundo"), ("madera","mundo"),
+    ("piedra","mundo"),("munndo","mundo"), ("puerta de madera","mundo"), ("valla de madera","mundo"), ("puerta de valla","mundo"), 
+    ("agua","mundo"), ("tierraFertil","mundo"), ("tierraDeSemillas","mundo"), ("tierraDeZanahorias","mundo"), 
+    ("tierraDePapas","mundo"), ("bambu","mundo"), ("hojas","mundo"), ("sandía","mundo"),
+    ("trigo","mundo"), ("escalera","mundo"), ("antorcha","mundo"), ("lana","mundo"),
+    ("carneDeVaca","mundo"), ("carnaDeOveja","mundo"), ("pollo","mundo"), ("cueroDeVaca","mundo"),
+    ("calabaza","mundo")
 
 
