@@ -10,7 +10,7 @@ CREATE TABLE jugadores (
   FOREIGN KEY (ubicacionuser_id) REFERENCES cursos(id)
 );
 
-CREATE TABLE item (
+CREATE TABLE items (
   ID INT AUTO_INCREMENT PRIMARY KEY,
   nombres_item VARCHAR(20),
   categoria_dimension TEXT,
