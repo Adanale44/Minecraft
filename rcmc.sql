@@ -32,18 +32,15 @@ CREATE TABLE mobs (
   ID INT AUTO_INCREMENT PRIMARY KEY,
   nombre_mob VARCHAR(255),
   tipo_mob VARCHAR(50),
-  dano_mob INT,
+  daño_mob INT,
   movilidad INT,
   animal BOOLEAN,
   mounstro BOOLEAN,
   humano BOOLEAN,
   distancia_ataque BOOLEAN DEFAULT FALSE,
-  bioma INT ,
   interaccion_id INT,
   reproduccion BOOLEAN,
-  boss BOOLEAN,
-  PRIMARY KEY (interaccion_id), 
-  FOREIGN KEY (interaccion_id) REFERENCES cursos(id)
+  vida_mob INT,
 );
 
 
@@ -72,12 +69,6 @@ CREATE TABLE biomas(
  FOREIGN KEY (mod_id) REFERENCES cursos(id)   
 );
 
-CREATE TABLE ubicacionuser(
- ID INT AUTO_INCREMENT PRIMARY KEY,
- coordx INT,
- coordz INT,
- coordy INT
-);
 
 CREATE TABLE estructura(
  ID INT AUTO_INCREMENT PRIMARY KEY,
