@@ -1,22 +1,22 @@
-INSERT INTO biomas (nombre_bioma, temperatura, geografia, humedad, descripcion_de_bioma)
-VALUES ("bosque","","plano","","")
-("bosque florido","","plano","","")
-("bosque roble oscuro","","plano","","")
-("selva","","plano","","")
-("pantano","","plano","","")
-("sabana","","plano","","")
-("taiga","","plano","","")
-("taiga nevada","","plano","","")
-("desierto","","plano","","")
-("montañas","","plano","","")
-("plana","","plano","","")
-("oceano","","plano","","")
-("oceano profundo","","plano","","")
-("oceano frio","","plano","","")
-("colinas boscosas","","plano","","")
-("colinas de taiga","","plano","","")
-("montañas extremas","","plano","","")
-("tundra nevada","","plano","","")
-("picos nevados","","plano","","")
-("meseta","","plano","","")
-("bioma de setas","","plano","","")
+INSERT INTO biomas (nombre_bioma, temperatura, geografia, tipo_de_bioma, generan_mobs_pas, generan_mobs_hos)
+VALUES ("bosque","20.5","plano","terrestre","true", "true"),
+("bosque florido","22.5","plano","terrestre","true", "true"),
+("bosque roble oscuro","18.5","plano","terrestre","true", "true"),
+("selva","18.5","plano","terrestre","true", "true"),
+("pantano","28.5","plano","terrestre","true", "true"),
+("sabana","25.5","plano","terrestre","true", "true"),
+("taiga","18.5","plano","terrestre","true", "true"),
+("taiga nevada","-11.5","montañoso","terrestre","true", "true"),
+("desierto","30.5","plano","terrestre","true", "true"),
+("montañas","22.5","montañoso","terrestre","true", "true"),
+("plana","18.5","plano","terrestre","true", "true"),
+("oceano","17.5","plano","acuatico","true", "true"),
+("oceano profundo","10.5","plano","acuatico","true", "true"),
+("oceano frio","1.5","plano","acuatico","true", "true"),
+("colinas boscosas","10.5","monañoso","terrestre","true", "true"),
+("colinas de taiga","13.5","montañoso","terrestre","true", "true"),
+("montañas extremas","6.5","montañoso","terrestre","true", "true"),
+("tundra nevada","-12.5","montañoso","terrestre","true", "true"),
+("picos nevados","-15.5","montañoso","terrestre","true", "true"),
+("meseta","16.5","plano","terrestre","true", "true"),
+("bioma de setas","12.5","montañoso","terrestre","true", "false");
