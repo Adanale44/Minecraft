@@ -10,6 +10,6 @@ INSERT INTO caracteristicas_jefe (efectos, comportamiento,
     "Calavera del Wither", "Ataque de impulso", "Explosión al invocarse"
 ),
 (
-   "Descomposición", "Hostil", "Altura:1.9975 Bloques Anchura:1.9975 Bloques", 
-    "Laser", "Spikes", "Explosión al invocarse"
+   "lentitud", "Hostil", "Altura:1.9975 Bloques Anchura:1.9975 Bloques", 
+    "Rayo Laser", "Espinas", "resistente"
 );

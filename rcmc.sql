@@ -88,7 +88,7 @@ CREATE TABLE mob_dimension (
 --10. Tabla jefes
 CREATE TABLE jefes (
     jefe_id INT PRIMARY KEY AUTO_INCREMENT,
-    nombre_jefe VARCHAR(255) NOT NULL,
+    nombre_jefe VARCHAR(50) NOT NULL,
     salud_jefe INT, 
     dañomax_jefe INT , 
     dañomin_jefe INT,
@@ -117,4 +117,14 @@ CREATE TABLE biomas (
     generar_mob_pass BOOLEAN,
     generar_mob_hoss BOOLEAN,
     genera_naturalmente BOOLEAN 
+);
+
+--13 Tabla estructuras
+
+CREATE TABLE estructuras (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    nombre_estructuras VARCHAR(50),
+    bioma_id INT FOREIGN KEY,
+    dimension_id INT FOREIGN KEY,
+    tipo_de_estructura VARCHAR(50)
 );
