@@ -58,7 +58,7 @@ CREATE TABLE bloque_bioma (
 CREATE TABLE mobs (
     mob_id INT PRIMARY KEY AUTO_INCREMENT,
     nombre_mob VARCHAR(255) NOT NULL,
-    tipo_mob ENUM('hostil', 'neutral', 'pasivo') NOT NULL,
+    tipo_mob ENUM('Hostil', 'Neutral', 'Pasivo') NOT NULL,
     salud_mob INT DEFAULT 10,
     daño_mob INT DEFAULT 0,  
     ataque_a_distancia BOOLEAN,
